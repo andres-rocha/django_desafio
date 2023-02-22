@@ -1,6 +1,6 @@
 import requests
 from django.shortcuts import HttpResponse
-from .models import Stations
+from app_proyecto.models import Stations
 
 def funcion(z,val):
     if 'val' in z:
@@ -33,7 +33,7 @@ def insert_stations(request):
             payment_phone = funcion(keysList[0]['stations'][i]['extra']['payment'], 'phone'),
             #post_code = models.Int(10)
             renting = keysList[0]['stations'][i]['extra']['renting'],
-            returning = keysList[0]['stations'][i]['extra']['returning'],
+            returning_val = keysList[0]['stations'][i]['extra']['returning'],
             slots = keysList[0]['stations'][i]['extra']['slots'],
             uid = keysList[0]['stations'][i]['extra']['uid'],
             free_bikes = keysList[0]['stations'][i]['free_bikes'],
